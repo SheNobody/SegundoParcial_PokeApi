@@ -1,4 +1,5 @@
 package org.grace.pokedex.utils;
+
 import android.os.AsyncTask;
 import android.util.Log;
 

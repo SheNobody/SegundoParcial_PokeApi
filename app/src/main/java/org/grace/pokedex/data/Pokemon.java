@@ -35,6 +35,7 @@ public class Pokemon {
         this.image = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + assetId + ".png";
     }
 
+
     public String getId() {
         return id;
     }
