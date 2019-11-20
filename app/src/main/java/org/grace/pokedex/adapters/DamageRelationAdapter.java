@@ -42,8 +42,9 @@ public class DamageRelationAdapter extends RecyclerView.Adapter<DamageRelationAd
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Glide.with(mContext).load(PokemonUtils.getDrawable(mContext, pokemonType.getName())).into(holder.damageFrom);
-        holder.relation.setText(TypeUtils.relationNames[position]);
-        List<String> relationTypes = pokemonType.getDamageRelations().get(TypeUtils.relationNames[position]);
+        holder.relation.setText(PokemonType.changedrelationNames[position]);
+
+        List<String> relationTypes = pokemonType.getDamageRelations().get(PokemonType.relationNames[position]);
         holder.rvTypes.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
         holder.rvTypes.setAdapter(new RowTypesAdapter(mContext, relationTypes));
     }

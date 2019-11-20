@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+
 import org.grace.pokedex.adapters.DamageRelationAdapter;
 import org.grace.pokedex.adapters.PokemonAdapter;
 import org.grace.pokedex.data.Pokemon;
@@ -76,6 +78,7 @@ public class PokemonTypeActivity extends AppCompatActivity implements AsyncTaskH
         adapter = new PokemonAdapter(this, pokemonType.getPokemons());
         adapter.setClickListener(this);
         pokemons.setAdapter(adapter);
+
     }
 
     @Override
