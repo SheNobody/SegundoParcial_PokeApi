@@ -5,11 +5,13 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.util.Log;
+
 import org.grace.pokedex.adapters.AsyncTaskHandler;
 import org.grace.pokedex.data.Pokemon;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;

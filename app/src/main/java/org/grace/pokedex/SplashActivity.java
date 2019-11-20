@@ -16,12 +16,12 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        imageView=(ImageView)findViewById(R.id.imageView);
-        Animation an2= AnimationUtils.loadAnimation(this,R.anim.rotate);
+        imageView = (ImageView) findViewById(R.id.imageView);
+        Animation an2 = AnimationUtils.loadAnimation(this, R.anim.rotate);
         imageView.startAnimation(an2);
 
-        new Handler().postDelayed(new Runnable(){
-            public void run(){
+        new Handler().postDelayed(new Runnable() {
+            public void run() {
                 Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();

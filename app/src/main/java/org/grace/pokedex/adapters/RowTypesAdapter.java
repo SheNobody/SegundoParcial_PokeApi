@@ -6,12 +6,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
+
 import org.grace.pokedex.R;
 import org.grace.pokedex.PokemonTypeActivity;
 import org.grace.pokedex.utils.PokemonUtils;
+
 import java.util.List;
 
 public class RowTypesAdapter extends RecyclerView.Adapter<RowTypesAdapter.ViewHolder> {

@@ -23,7 +23,6 @@ import org.grace.pokedex.data.PokemonType;
 import org.grace.pokedex.adapters.AsyncTaskHandler;
 import org.grace.pokedex.utils.TypeUtils;
 
-
 public class PokemonTypeActivity extends AppCompatActivity implements AsyncTaskHandler, PokemonAdapter.ItemClickListener {
 
     TextView name;
@@ -62,7 +61,7 @@ public class PokemonTypeActivity extends AppCompatActivity implements AsyncTaskH
                 Intent intent2 = new Intent(this, MainActivity.class);
                 startActivity(intent2);
                 return true;
-                
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -78,7 +77,6 @@ public class PokemonTypeActivity extends AppCompatActivity implements AsyncTaskH
         adapter = new PokemonAdapter(this, pokemonType.getPokemons());
         adapter.setClickListener(this);
         pokemons.setAdapter(adapter);
-
     }
 
     @Override

@@ -1,12 +1,9 @@
 package org.grace.pokedex;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,7 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -24,7 +20,7 @@ import org.grace.pokedex.data.AppDatabase;
 import org.grace.pokedex.data.Pokemon;
 import org.grace.pokedex.data.PokemonDetails;
 import org.grace.pokedex.adapters.AsyncTaskHandler;
-import org.grace.pokedex.network.PokemonDetailsAsyncTask;
+import org.grace.pokedex.utils.PokemonDetailsAsyncTask;
 
 import java.util.Arrays;
 
@@ -93,7 +89,6 @@ public class PokemonDetailsActivity extends AppCompatActivity implements AsyncTa
         for (int i = 0; i < details.getTypes().length; i++) {
             typesString += details.getTypes()[i] + " ";
         }
-
         rvDetailsTypes.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         rvDetailsTypes.setAdapter(new RowTypesAdapter(this, Arrays.asList(details.getTypes())));
         types.setText("Tipo/s " + System.lineSeparator() + typesString);

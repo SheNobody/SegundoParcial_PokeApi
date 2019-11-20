@@ -2,18 +2,21 @@ package org.grace.pokedex.utils;
 
 import android.os.AsyncTask;
 import android.util.Log;
+
 import org.grace.pokedex.adapters.AsyncTaskHandler;
 import org.grace.pokedex.data.Pokemon;
 import org.grace.pokedex.data.PokemonType;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import static org.grace.pokedex.utils.PokemonUtils.createUrl;
 import static org.grace.pokedex.utils.PokemonUtils.makeHttpRequest;
 
